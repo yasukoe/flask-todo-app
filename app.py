@@ -17,7 +17,7 @@ class Post(db.Model):
 def index():
     if request.method == 'GET':
         posts = Post.query.order_by(Post.due)
-        return render_template('index.html', posts=posts, today= date.today())
+        return render_template('/templates/index.html', posts=posts, today= date.today())
     else:
         title = request.form.get('title')
         detail = request.form.get('detail')
