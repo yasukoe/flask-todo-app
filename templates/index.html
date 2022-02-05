@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="container">
-    <a class="btn btn-info btn-lg m-5" href="/create" role="button">CREATE NEW TASK</a>
+    <a class="btn btn-info btn-lg m-5" href="/template/create" role="button">CREATE NEW TASK</a>
     {% for post in posts %}
     <div class="card w-50 mb-3" style="margin: auto;">
         <div class="card-body">
@@ -13,9 +13,9 @@
             {% endif %}
             <h2 class="card-title">{{ post.title }}</h2>
             <p>DUE : {{ post.due.date() }}</p>
-            <a class="btn btn-secondary btn-sm" href="/detail/{{ post.id }}" role="button">Detail</a>
-            <a class="btn btn-success btn-sm" href="/update/{{ post.id }}" role="button">Update</a>
-            <a class="btn btn-danger btn-sm" href="/delete/{{ post.id }}" role="button">Delete</a>
+            <a class="btn btn-secondary btn-sm" href="/template/detail/{{ post.id }}" role="button">Detail</a>
+            <a class="btn btn-success btn-sm" href="/template/update/{{ post.id }}" role="button">Update</a>
+            <a class="btn btn-danger btn-sm" href="/template/delete/{{ post.id }}" role="button">Delete</a>
         </div>
     </div>
     {% endfor %}
